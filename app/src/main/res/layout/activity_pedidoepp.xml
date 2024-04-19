@@ -46,8 +46,9 @@
 
     <Switch
         android:id="@+id/switch3"
-        android:layout_width="337dp"
-        android:layout_height="45dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:text="Zapatos de seguridad"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
@@ -60,14 +61,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Seleccione los epp para su pedido"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:layout_editor_absoluteX="98dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Switch
         android:id="@+id/switch4"
-        android:layout_width="337dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Botas Mineras"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -75,56 +78,61 @@
 
     <Switch
         android:id="@+id/switch5"
-        android:layout_width="339dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Lentes Claros"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/switch4" />
 
     <Switch
         android:id="@+id/switch6"
-        android:layout_width="339dp"
-        android:layout_height="45dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Lentes Oscuros"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/switch5" />
 
     <Switch
         android:id="@+id/switch7"
-        android:layout_width="337dp"
-        android:layout_height="46dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Buzo Overol"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/switch6" />
 
     <Switch
         android:id="@+id/switch8"
-        android:layout_width="337dp"
-        android:layout_height="47dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Casco Minero"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/switch7" />
 
     <Switch
         android:id="@+id/switch9"
-        android:layout_width="337dp"
-        android:layout_height="44dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Guantes nitrilo"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/switch8" />
 
@@ -132,9 +140,11 @@
         android:id="@+id/button4"
         android:layout_width="188dp"
         android:layout_height="61dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#2196F3"
         android:text="Realizar Pedido"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="638dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/switch9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
