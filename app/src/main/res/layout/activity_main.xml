@@ -9,16 +9,17 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_correo_login"
-        android:layout_width="302dp"
-        android:layout_height="50dp"
+        android:layout_width="303dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="User" />
+            android:layout_width="292dp"
+            android:layout_height="49dp"
+            android:hint="Correo" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -73,16 +74,19 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_clave_login"
-        android:layout_width="302dp"
-        android:layout_height="50dp"
+        android:layout_width="303dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/til_correo_login">
+        app:layout_constraintTop_toBottomOf="@+id/til_correo_login"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Password" />
+            android:layout_width="292dp"
+            android:layout_height="49dp"
+            android:hint="Password"
+            android:password="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Switch
@@ -100,7 +104,7 @@
         android:id="@+id/btn_iniciar_sesion_login"
         android:layout_width="161dp"
         android:layout_height="57dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#2196F3"
         android:text="Iniciar Sesion"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
