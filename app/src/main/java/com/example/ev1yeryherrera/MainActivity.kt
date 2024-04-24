@@ -1,7 +1,10 @@
 package com.example.ev1yeryherrera
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Switch
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,8 +26,14 @@ class MainActivity : AppCompatActivity() {
 
         val til_correo_login = findViewById<TextInputLayout>(R.id.til_correo_login)
         val til_clave_login = findViewById<TextInputLayout>(R.id.til_clave_login)
+        val sw_recordar = findViewById<Switch>(R.id.sw_recordar)
         val btn_iniciar_sesion_login = findViewById<Button>(R.id.btn_iniciar_sesion_login)
         val btn_registrarse_login = findViewById<Button>(R.id.btn_registrarse_login)
+
+        //SHARED PREFERENCES
+        val preferencias = getSharedPreferences("datos",Context.MODE_PRIVATE)
+        // si recordamos el valor lo vamos a setear
+        til_correo_login.editText?.setText(preferencias.getString("correo",""))
 
         //obtener valores de los campos de texto
 
@@ -32,15 +41,23 @@ class MainActivity : AppCompatActivity() {
           var correo = til_correo_login.editText?.text.toString()
            var clave = til_clave_login.editText?.text.toString()
            var contador = validarcampos()
+           var isRecordar = sw_recordar.isChecked
+           println("El SWITCH ESTA: $isRecordar")
            if (contador == 0){
-
+                if (isRecordar){
+            val editor = preferencias.edit()
+                    editor.putString("correo",correo)
+                    editor.commit()
+                }
                Toast.makeText(this, "Login Exitoso", Toast.LENGTH_LONG).show()
+           val intent = Intent(this@MainActivity,principalActivity::class.java)
+               intent.putExtra("correo",correo)
+               startActivity(intent)
+
            }
-
-
        }
         btn_registrarse_login.setOnClickListener {
-            println("presionaste boton registrarse")
+            startActivity(Intent(this@MainActivity,registroActivity::class.java))
 
         }
     }

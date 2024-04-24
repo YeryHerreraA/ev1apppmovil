@@ -16,10 +16,10 @@
             android:name=".editarregistroActivity"
             android:exported="false" />
         <activity
-            android:name=".pedidoeppActivity"
+            android:name=".nueva_listaActivity"
             android:exported="false" />
         <activity
-            android:name=".nuevalistaeppActivity"
+            android:name=".principalActivity"
             android:exported="false" />
         <activity
             android:name=".registroActivity"
