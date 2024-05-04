@@ -60,7 +60,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="44dp"
         android:backgroundTint="#2196F3"
-        android:text="Editar"
+        android:text="Guardar"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.147"
