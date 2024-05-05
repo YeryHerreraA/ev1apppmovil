@@ -17,4 +17,3 @@ class Lista {
         this.user = user
     }
 }
-}

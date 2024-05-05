@@ -3,9 +3,6 @@ package com.example.ev1yeryherrera
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ListView
-import android.widget.Spinner
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -27,8 +24,8 @@ class nueva_listaActivity : AppCompatActivity() {
 
         //REFERENCIAS A LOS WIDGETS
 
-        val nombre_nueva_lista = findViewById<TextInputLayout>(R.id.nombre_nueva_lista)
-        val detalle_nueva_lista = findViewById<TextInputLayout>(R.id.detalle_nueva_lista)
+        val nombre_nueva_lista = findViewById<TextInputLayout>(R.id.til_name_list)
+        val detalle_nueva_lista = findViewById<TextInputLayout>(R.id.til_description_list)
         val btn_editar_pedido = findViewById<Button>(R.id.btn_editar_pedido)
         val btn_eliminar_pedido = findViewById<Button>(R.id.btn_eliminar_pedido)
 

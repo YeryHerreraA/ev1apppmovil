@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/detalle_nueva_lista"
+        app:layout_constraintTop_toBottomOf="@+id/til_description_list"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -80,11 +80,11 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toEndOf="@+id/btn_editar_pedido"
-        app:layout_constraintTop_toBottomOf="@+id/detalle_nueva_lista"
+        app:layout_constraintTop_toBottomOf="@+id/til_description_list"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nombre_nueva_lista"
+        android:id="@+id/til_name_list"
         android:layout_width="328dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -100,13 +100,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/detalle_nueva_lista"
+        android:id="@+id/til_description_list"
         android:layout_width="328dp"
         android:layout_height="271dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/nombre_nueva_lista">
+        app:layout_constraintTop_toBottomOf="@+id/til_name_list">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"

@@ -10,13 +10,20 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import androidx.room.Room
+import com.example.ev1yeryherrera.room.Db
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.coroutines.launch
+import java.security.Principal
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        //INICIALIZAMOS LA DB
+        val room = Room.databaseBuilder(this, Db::class.java,"database-ciisa").allowMainThreadQueries().build()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -45,15 +52,28 @@ class MainActivity : AppCompatActivity() {
            println("El SWITCH ESTA: $isRecordar")
            if (contador == 0){
                 if (isRecordar){
-            val editor = preferencias.edit()
+                    val editor = preferencias.edit()
                     editor.putString("correo",correo)
                     editor.commit()
                 }
+
+               lifecycleScope.launch {
+                   val response=room.daoUsuario().login(correo,clave)
+                   if (response.size ==1){
+                       Toast.makeText(this@MainActivity,"Login exitoso", Toast.LENGTH_LONG).show()
+                       val intent =Intent(this@MainActivity,Principal::class.java)
+                   }
+               }
+
                Toast.makeText(this, "Login Exitoso", Toast.LENGTH_LONG).show()
            val intent = Intent(this@MainActivity,principalActivity::class.java)
                intent.putExtra("correo",correo)
                startActivity(intent)
 
+           }
+           else{
+               til_correo_login.error = "Clave o correo invalido "
+               til_clave_login.error = "Clave o correo invalido "
            }
        }
         btn_registrarse_login.setOnClickListener {

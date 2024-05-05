@@ -89,7 +89,9 @@ class principalActivity : AppCompatActivity() {
         //evento boton añadir
 
         btn_nueva_lista_principal.setOnClickListener {
-            startActivity(Intent(this@principalActivity,nueva_listaActivity::class.java))
+            val  intent = Intent(this@principalActivity,nueva_listaActivity::class.java)
+            intent.putExtra("correo",correo)
+            startActivity(intent)
         }
 
     }

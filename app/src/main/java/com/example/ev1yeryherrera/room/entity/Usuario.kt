@@ -20,4 +20,3 @@ class Usuario {
         this.password = password
     }
 }
-}

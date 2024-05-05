@@ -51,14 +51,14 @@ class registroActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 val id = room.daoUsuario().agregarUsuario(usuario)
                 if (id>0){
-                    Log.d("IDEUSER",id.toString())
-                    Toast.makeText(, this@registroActivity, "Usuario agregado exitosamente", Toast.LENGTH_SHORT).show()
+                    Log.d("IDUSER",id.toString())
+                    Toast.makeText(this@registroActivity, "Usuario agregado exitosamente", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@registroActivity,principalActivity::class.java))
+                }else{
+                    Toast.makeText(this@registroActivity, "Error al agregar el usuario", Toast.LENGTH_SHORT).show()
                 }
-                startActivity(Intent(this@registroActivity,principalActivity::class.java))
-            }else{
-            Toast.makeText(, this@registroActivity, "Usuario agregado exitosamente", Toast.LENGTH_SHORT).show()
 
-        }
+            }
 
         }
 
